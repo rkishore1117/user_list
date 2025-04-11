@@ -25,7 +25,7 @@ npm install -g @angular/cli@14
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/angular-user-management.git
+git clone https://github.com/rkishore1117/user_list.git
 cd angular-user-management
 npm install
 ng serve
