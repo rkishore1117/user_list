@@ -21,10 +21,15 @@ export class UserFormComponent implements OnInit {
     private router: Router
   ) {}
 
+
+  emailPattern: RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
   ngOnInit(): void {
     this.userForm = this.fb.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      // email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(this.emailPattern)]],
+
       role: ['', Validators.required],
     });
 
